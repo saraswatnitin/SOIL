@@ -1,0 +1,13 @@
+y_pred_proba = df_actual_predicted_probs['loan_data_targets_test']
+auc = roc_auc_score(loan_data_targets_test, y_pred_proba)
+
+
+plt.plot(fpr, tpr, label='ROC curve (area = %0.2f)' %auc)
+plt.legend(loc="lower right")
+
+
+
+
+y_pred_proba = df_actual_predicted_probs['y_hat_test_proba_lgd_stage_1']
+auc = roc_auc_score(loan_data_targets_test, y_pred_proba)
+
